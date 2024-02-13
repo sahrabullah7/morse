@@ -34,3 +34,10 @@ class TestMorseCodeConversion(unittest.TestCase):
         with self.assertRaises(ValueError):  
 
             English_function('.... ----- / -..--- / .-.. .-.. .-', MORSECODE)   #call a wrong function
+
+# Test conversion from Morse code with space
+    def test_morse_code_with_space(self): #check the less spaces in the sentence
+        
+        expected_result = 'TKH USER'  # Expected English text for '- -.- .... / ..- ... . .-.'
+        actual_result = English_function('- -.- .... ..- ... . .-.', MORSECODE)
+        print(f"Expected: {expected_result}\nActual: {actual_result}")
