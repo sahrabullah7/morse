@@ -28,3 +28,25 @@ def translate_to_english(morse_code):
        else:
            return f"Error: '{word}' is not in the dictionary."
    return english_text
+def main():
+   while True:
+       print("\nMenu:")
+       print("1. convert English to Morse code")
+       print("2. convert Morse code to English")
+       print("3. Main menu")
+       choice = input("Enter your choice (1/2/3): ")
+       if choice == '1':
+           text_to_translate = input("Enter the text to translate to Morse code: ")
+           result = translate_to_morse(text_to_translate)
+           print("Translated to Morse code:", result)
+       elif choice == '2':
+           morse_to_translate = input("Enter the Morse code to translate to English: ")
+           result = translate_to_english(morse_to_translate)
+           print("Translated to English:", result)
+       elif choice == '3':
+           print("Thank you for using morse code. Goodbye!")
+           break
+       else:
+           print("Invalid choice. Please enter a valid option (1/2/3).")
+if __name__ == "__main__":
+   main()
