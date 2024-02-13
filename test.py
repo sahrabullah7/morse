@@ -27,3 +27,10 @@ class TestMorseCodeConversion(unittest.TestCase):
         
         # check that the actual result matches the expected result; otherwise, raise an AssertionError with a custom error message
         self.assertEqual(actual_result, expected_result, f"Expected: {expected_result}\nActual: {actual_result}")
+
+# raising an error for invalid morse code input
+    def test_invalid_morse_to_english(self):
+
+        with self.assertRaises(ValueError):  
+
+            English_function('.... ----- / -..--- / .-.. .-.. .-', MORSECODE)   #call a wrong function
