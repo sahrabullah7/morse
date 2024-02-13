@@ -6,7 +6,7 @@ import unittest
 # Define a test class thats from 'unittest.TestCase'
 class TestMorseCodeConversion(unittest.TestCase):
 
-# test the convertion of English to Morse code
+# test the convertion of English to Morse 
     def test_english_to_morse(self):
         # The expected Morse code result for the input 'TKH USER'
         expected_result = '- -.- .... / ..- ... . .-. '
@@ -15,4 +15,15 @@ class TestMorseCodeConversion(unittest.TestCase):
         actual_result = Morse_function('TKH USER', MORSECODE)
         
         # Assert that the actual result matches the expected result; otherwise, raise an AssertionError with a custom error message
+        self.assertEqual(actual_result, expected_result, f"Expected: {expected_result}\nActual: {actual_result}")
+
+ # test THE CONVERSION Morse to English
+    def test_morse_to_english(self):
+        # Define the expected English result for the input Morse code
+        expected_result = 'TKH USER' 
+        
+        # Call the 'English_function' function to convert the Morse code to English
+        actual_result = English_function(' - -.- .... / ..- ... . .-.', MORSECODE)
+        
+        # check that the actual result matches the expected result; otherwise, raise an AssertionError with a custom error message
         self.assertEqual(actual_result, expected_result, f"Expected: {expected_result}\nActual: {actual_result}")
