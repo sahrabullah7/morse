@@ -41,3 +41,6 @@ class TestMorseCodeConversion(unittest.TestCase):
         expected_result = 'TKH USER'  # Expected English text for '- -.- .... / ..- ... . .-.'
         actual_result = English_function('- -.- .... ..- ... . .-.', MORSECODE)
         print(f"Expected: {expected_result}\nActual: {actual_result}")
+
+if __name__ == '__main__':
+    unittest.main()
