@@ -17,3 +17,14 @@ def translate_to_morse(text):
        else:
            return f"Error: '{char}' is not in the dictionary."
    return morse_code
+def translate_to_english(morse_code):
+   """Translates Morse code to English text."""
+   english_text = ''
+   morse_to_eng = {v: k for k, v in morse_code_dict.items()}
+   morse_words = morse_code.split()
+   for word in morse_words:
+       if word in morse_to_eng:
+           english_text += morse_to_eng[word]
+       else:
+           return f"Error: '{word}' is not in the dictionary."
+   return english_text
